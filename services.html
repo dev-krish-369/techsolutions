@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Web Development, Mobile Apps & Cloud Solutions</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="description" content="Explore our comprehensive digital services: custom web development, mobile app creation, cloud solutions, UI/UX design, and IT consulting. Professional solutions for your business growth.">
+    <meta name="keywords" content="web development services, mobile app development, cloud solutions, UI/UX design, IT consulting, digital services, software development, e-commerce solutions">
+    <meta name="author" content="TechSolutions Inc.">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.techsolutions.com/services">
+    <meta property="og:title" content="Our Services | Web Development, Mobile Apps & Cloud Solutions">
+    <meta property="og:description" content="Professional digital services including web development, mobile apps, cloud solutions, and IT consulting for business growth.">
+    <meta property="og:image" content="https://www.techsolutions.com/images/og-services.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="TechSolutions Services Portfolio">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.techsolutions.com/services">
+    <meta name="twitter:title" content="Our Digital Services | TechSolutions">
+    <meta name="twitter:description" content="Complete range of digital services: web development, mobile apps, cloud solutions, and IT consulting.">
+    <meta name="twitter:image" content="https://www.techsolutions.com/images/twitter-services.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.techsolutions.com/services">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Stylesheets & Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* CSS Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --gray-light: #e2e8f0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: var(--secondary);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
+            position: relative;
+            text-align: center;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 4px;
+            background-color: var(--primary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-subtitle {
+            color: var(--gray);
+            font-size: 1.1rem;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo-placeholder {
+            background-color: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--primary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--secondary);
+            cursor: pointer;
+        }
+
+        /* Services Hero */
+        .services-hero {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .services-hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+            line-height: 1.2;
+        }
+
+        .services-hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        /* Services Page Section */
+        .services-page-section {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .service-detailed {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--gray-light);
+        }
+
+        .service-detailed:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-header {
+            padding: 30px 30px 20px;
+            background-color: #f8fafc;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .service-header h2 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .service-header p {
+            color: var(--gray);
+        }
+
+        .service-body {
+            padding: 30px;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .service-features li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .service-features i {
+            color: var(--primary);
+            margin-top: 5px;
+        }
+
+        .service-img-placeholder {
+            height: 200px;
+            background-color: #f1f5f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+            border-radius: 6px;
+            margin: 20px 0;
+            padding: 20px;
+        }
+
+        .service-img-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #94a3b8;
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 100px 0;
+            background-color: #f8fafc;
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .process-step {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 25px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .process-step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .process-step p {
+            color: var(--gray);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        .cta-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .cta-section .btn {
+            background-color: white;
+            color: var(--primary);
+        }
+
+        .cta-section .btn:hover {
+            background-color: #f1f5f9;
+        }
+
+        .cta-section .btn-secondary {
+            background-color: transparent;
+            border-color: white;
+            color: white;
+        }
+
+        .cta-section .btn-secondary:hover {
+            background-color: white;
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary);
+            color: white;
+            padding: 70px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background-color: var(--primary);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .contact-info i {
+            color: var(--primary);
+            margin-top: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #334155;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .services-hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 15px 0;
+            }
+            
+            nav {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+            }
+            
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .services-hero h1 {
+                font-size: 2.4rem;
+            }
+            
+            .cta-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .services-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .services-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .service-header,
+            .service-body {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-placeholder">TS</div>
+                <span>TechSolutions</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Services Hero -->
+    <section class="services-hero">
+        <div class="container">
+            <h1>Our Comprehensive Services</h1>
+            <p>We offer a full spectrum of digital solutions designed to propel your business forward. From custom development to strategic consulting, our team delivers results that matter.</p>
+            <a href="#all-services" class="btn">Explore Our Services</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-page-section" id="all-services">
+        <div class="container">
+            <h2 class="section-title">What We Offer</h2>
+            <p class="section-subtitle">Each service is tailored to meet your specific business needs and goals, ensuring maximum impact and return on investment.</p>
+            
+            <div class="services-container">
+                <!-- Web Development Service -->
+                <div class="service-detailed" id="web-dev">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h2>Web Development</h2>
+                        <p>Custom, responsive websites and web applications that drive engagement and conversions.</p>
+                    </div>
+                    <div class="service-body">
+                        <div class="service-img-placeholder">
+                            <i class="fas fa-laptop-code"></i>
+                            <p>Custom Web Development Image/Icon Here</p>
+                        </div>
+                        
+                        <p>We build modern, high-performance websites and web applications using the latest technologies. Our development process focuses on user experience, scalability, and business objectives.</p>
+                        
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> <strong>Custom Website Development</strong> - Tailored solutions for your unique needs</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>E-commerce Solutions</strong> - Secure online stores with payment integration</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Content Management Systems</strong> - Easy-to-update websites with WordPress, etc.</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Web Application Development</strong> - Custom business applications</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>API Integration</strong> - Connect with third-party services and platforms</li>
+                        </ul>
+                        
+                        <a href="contact.html" class="btn">Start Your Project</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile App Development -->
+                <div class="service-detailed" id="mobile-dev">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h2>Mobile App Development</h2>
+                        <p>Native and cross-platform mobile applications for iOS and Android that users love.</p>
+                    </div>
+                    <div class="service-body">
+                        <div class="service-img-placeholder">
+                            <i class="fas fa-mobile"></i>
+                            <p>Mobile App Development Image/Icon Here</p>
+                        </div>
+                        
+                        <p>From concept to launch, we develop mobile applications that deliver exceptional user experiences and drive business growth across all mobile platforms.</p>
+                        
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> <strong>iOS App Development</strong> - Native apps for iPhone and iPad</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Android App Development</strong> - Native apps for Android devices</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Cross-Platform Development</strong> - Single codebase for multiple platforms</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>UI/UX Design</strong> - Intuitive and engaging mobile interfaces</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>App Maintenance & Support</strong> - Ongoing updates and improvements</li>
+                        </ul>
+                        
+                        <a href="contact.html" class="btn">Discuss Your App Idea</a>
+                    </div>
+                </div>
+                
+                <!-- Cloud Solutions -->
+                <div class="service-detailed" id="cloud">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h2>Cloud Solutions</h2>
+                        <p>Scalable cloud infrastructure and services to optimize your business operations.</p>
+                    </div>
+                    <div class="service-body">
+                        <div class="service-img-placeholder">
+                            <i class="fas fa-server"></i>
+                            <p>Cloud Infrastructure Image/Icon Here</p>
+                        </div>
+                        
+                        <p>We help businesses leverage the power of cloud computing to improve efficiency, reduce costs, and scale operations seamlessly.</p>
+                        
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> <strong>Cloud Migration</strong> - Seamless transition to cloud platforms</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>AWS, Azure & Google Cloud</strong> - Expert implementation on major platforms</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Cloud Infrastructure Management</strong> - Ongoing monitoring and optimization</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Data Backup & Recovery</strong> - Secure data protection solutions</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>DevOps & Automation</strong> - Streamlined development and deployment</li>
+                        </ul>
+                        
+                        <a href="contact.html" class="btn">Optimize Your Infrastructure</a>
+                    </div>
+                </div>
+                
+                <!-- Digital Marketing -->
+                <div class="service-detailed" id="marketing">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h2>Digital Marketing</h2>
+                        <p>Data-driven marketing strategies to grow your online presence and drive conversions.</p>
+                    </div>
+                    <div class="service-body">
+                        <div class="service-img-placeholder">
+                            <i class="fas fa-bullseye"></i>
+                            <p>Digital Marketing Image/Icon Here</p>
+                        </div>
+                        
+                        <p>Our comprehensive digital marketing services help you reach the right audience, engage potential customers, and achieve measurable business results.</p>
+                        
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> <strong>Search Engine Optimization (SEO)</strong> - Improve organic search rankings</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Social Media Marketing</strong> - Engage audiences on relevant platforms</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Content Marketing</strong> - Create valuable content that attracts customers</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Pay-Per-Click Advertising</strong> - Targeted ads for immediate results</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Analytics & Reporting</strong> - Data-driven insights and performance tracking</li>
+                        </ul>
+                        
+                        <a href="contact.html" class="btn">Boost Your Marketing</a>
+                    </div>
+                </div>
+                
+                <!-- UI/UX Design -->
+                <div class="service-detailed" id="design">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h2>UI/UX Design</h2>
+                        <p>User-centered design that creates intuitive and engaging digital experiences.</p>
+                    </div>
+                    <div class="service-body">
+                        <div class="service-img-placeholder">
+                            <i class="fas fa-palette"></i>
+                            <p>UI/UX Design Image/Icon Here</p>
+                        </div>
+                        
+                        <p>We design digital products that users love to interact with. Our human-centered approach ensures that every design decision enhances the user experience.</p>
+                        
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> <strong>User Research & Analysis</strong> - Understand user needs and behaviors</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Wireframing & Prototyping</strong> - Visualize concepts before development</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Interface Design</strong> - Beautiful, functional user interfaces</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Usability Testing</strong> - Validate designs with real users</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Design Systems</strong> - Consistent design language across products</li>
+                        </ul>
+                        
+                        <a href="contact.html" class="btn">Design Your Experience</a>
+                    </div>
+                </div>
+                
+                <!-- IT Consulting -->
+                <div class="service-detailed" id="consulting">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h2>IT Consulting</h2>
+                        <p>Strategic technology guidance to align IT with your business objectives.</p>
+                    </div>
+                    <div class="service-body">
+                        <div class="service-img-placeholder">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <p>IT Consulting Image/Icon Here</p>
+                        </div>
+                        
+                        <p>Our expert consultants provide strategic guidance to help you make informed technology decisions that drive business growth and competitive advantage.</p>
+                        
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> <strong>Technology Strategy</strong> - Align IT with business goals</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Digital Transformation</strong> - Modernize your technology stack</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>IT Infrastructure Planning</strong> - Design scalable and secure systems</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Security Assessment</strong> - Identify and mitigate vulnerabilities</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Vendor Selection</strong> - Choose the right technology partners</li>
+                        </ul>
+                        
+                        <a href="contact.html" class="btn">Get Expert Advice</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">Our Process</h2>
+            <p class="section-subtitle">We follow a structured approach to ensure every project is delivered on time, within budget, and exceeds expectations.</p>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Discovery & Planning</h3>
+                    <p>We begin by understanding your business goals, target audience, and project requirements to create a detailed plan.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Design & Prototyping</h3>
+                    <p>Our design team creates wireframes and prototypes to visualize the solution before development begins.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Development</h3>
+                    <p>Using agile methodologies, we build your solution with regular updates and opportunities for feedback.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Testing & Launch</h3>
+                    <p>Rigorous testing ensures quality before launch, followed by deployment and post-launch support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>Contact us today to discuss your project and discover how our services can help you achieve your goals. Let's build something great together.</p>
+            <div class="cta-btns">
+                <a href="contact.html" class="btn">Get Started Now</a>
+                <a href="tel:+15551234567" class="btn btn-secondary">Call Us: +1 (555) 123-4567</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>TechSolutions</h3>
+                    <p>Providing innovative digital solutions to help businesses thrive in the digital era. We combine technical expertise with creative thinking to deliver exceptional results.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/techsolutions" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com/techsolutions" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.in/techsolutions" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/techsolutions" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#web-dev">Web Development</a></li>
+                        <li><a href="#mobile-dev">Mobile App Development</a></li>
+                        <li><a href="#cloud">Cloud Solutions</a></li>
+                        <li><a href="#marketing">Digital Marketing</a></li>
+                        <li><a href="#design">UI/UX Design</a></li>
+                        <li><a href="#consulting">IT Consulting</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Address:</strong>
+                                <p>123 Tech Street, Digital City, DC 10001</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone:</strong>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email:</strong>
+                                <p>services@techsolutions.com</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 TechSolutions Inc. All rights reserved. | Professional Digital Services</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (mainNav.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+            
+            // Close mobile menu when clicking on a link
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mainNav.classList.remove('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+            
+            // Smooth scroll to service sections
+            const serviceLinks = document.querySelectorAll('a[href^="#"]');
+            serviceLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId.startsWith('#') && targetId.length > 1) {
+                        e.preventDefault();
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 80,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
